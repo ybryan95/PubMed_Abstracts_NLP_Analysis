@@ -1,57 +1,68 @@
-# NLP Analysis of Gene's Associations on Disease Ontology and Gene Ontology
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![Python-docx](https://img.shields.io/badge/python--docx-3E8FC1?style=plastic&logo=python&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-007ACC?style=social&logo=matplotlib&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=flat-square&logo=seaborn&logoColor=white)
+![SciSpacy](https://img.shields.io/badge/SciSpacy-FFCA28?style=for-the-badge&logo=SciSpacy&logoColor=white)
+![Biopython](https://img.shields.io/badge/Biopython-FFA500?style=plastic&logo=biopython&logoColor=white)
 
-## Table of Contents
-1. [Background](#background)
-2. [Methodology](#methodology)
-3. [Output](#output)
-4. [Requirements](#requirements)
-5. [Usage](#usage)
 
-<a name="background"></a>
-## Background
+# :dna: NLP Analysis of Gene's Associations on Disease Ontology and Gene Ontology :dna:
 
-This repository contains Python code that performs Natural Language Processing (NLP) to analyse genes' associations based on Disease Ontology and Gene Ontology. It does this using abstracts from PubMed, obtained via an automated literature search. This code is a sequel to the Python scripts found in the following repositories:
+<p align="center">
+  <img src="https://example.com/path/to/logo_or_relevant_image.png" alt="Logo or relevant image">
+</p>
+
+This repository contains Python code that performs Natural Language Processing (NLP) to analyze genes' associations based on Disease Ontology and Gene Ontology. It does this using abstracts from PubMed, obtained via an automated literature search. 
+
+## :pushpin: Table of Contents
+
+- [Background](#background)
+- [Prerequisites](#prerequisites)
+- [Methodology](#methodology)
+- [Output](#output)
+- [Usage](#usage)
+- [Contributing](#contributing)
+
+## :bulb: Background
+
+This project continues the Python scripts found in the following repositories:
 
 1. [PubMed_scraper](https://github.com/ybryan95/PubMed_scraper): A script that scrapes PubMed for articles related to a given topic, extracting the titles, abstracts, and PMIDs of the articles using the PubMed API.
-2. [PubMed_scraper_GPT](https://github.com/ybryan95/PubMed_scraper_GPT): A script that utilizes the GPT-3 language model to filter articles found via an automated literature search on PubMed. It then parses the results of the queries to extract the titles, abstracts, and PMIDs of the articles.
+2. [PubMed_scraper_GPT](https://github.com/ybryan95/PubMed_scraper_GPT): A script that utilizes the GPT-3 language model to filter articles found via an automated literature search on PubMed.
 
-Please visit these repositories if you are interested in understanding how the input file 'output_text.docx' is generated. 
+We encourage you to visit these repositories to understand how the input file 'output_text.docx' is generated.
 
-<a name="methodology"></a>
-## Methodology
+## :hammer_and_wrench: Prerequisites
 
-This script works by parsing information from the 'output_text.docx' document (a product of the PubMed_scraper and PubMed_scraper_GPT repositories). The document contains tables of gene names and related information. This information is processed and utilized to perform requests to the BioOntology API for Disease Ontology and Gene Ontology data related to each gene. The script then categorizes and analyses this data, outputting the results as heatmaps and frequency bar graphs for both Disease Ontology and Gene Ontology. 
+Before you begin, ensure you have met the following requirements:
 
-<a name="output"></a>
-## Output
+* You have installed the required Python libraries: `python-docx`, `pandas`, `requests`, `matplotlib`, `seaborn`, `numpy`, `json`, and `time`.
+* You have a Windows/Linux/Mac machine running Python 3.7+.
+* You have a BioOntology API key.
 
-The output of this script includes:
+## :compass: Methodology
 
-1. Frequency plots of disease counts and disease frequencies for diseases that occur more or less than five times.
-2. A heatmap showing the associations between different genes and diseases.
-3. A clustered heatmap of these gene-disease associations.
-4. Similarly, frequency plots and heatmaps are generated for Gene Ontology data as well.
+This script works by parsing information from the 'output_text.docx' document (a product of the PubMed_scraper and PubMed_scraper_GPT repositories). The document contains tables of gene names and related information. 
 
-<a name="requirements"></a>
-## Requirements
+This information is processed and utilized to perform requests to the BioOntology API for Disease Ontology and Gene Ontology data related to each gene. The script then categorizes and analyses this data, outputting the results as heatmaps and frequency bar graphs for both Disease Ontology and Gene Ontology. 
 
-This script requires several Python libraries including:
+## :bar_chart: Output
 
-- Python-docx: For reading and writing Microsoft Office Word documents.
-- Pandas: For data manipulation and analysis.
-- Requests: For making HTTP requests.
-- Matplotlib and Seaborn: For data visualization.
-- Numpy: For numerical operations.
-- json: For handling JSON data.
-- time: For managing the pace of API requests.
+The script outputs:
 
-Additionally, the script utilizes the BioOntology API and requires an API key for this service. 
+1. Frequency plots of disease counts and disease frequencies.
+2. A heatmap showing gene-disease associations.
+3. A clustered heatmap (hierarchical clustering) of these associations.
+4. Frequency plots and heatmaps for Gene Ontology data.
 
-<a name="usage"></a>
-## Usage
+## :computer: Usage
 
-To use this script, you simply need to provide the 'output_text.docx' file from the PubMed_scraper and PubMed_scraper_GPT scripts as input. You will also need to provide your BioOntology API key.
+Provide the 'output_text.docx' file from the PubMed_scraper and PubMed_scraper_GPT scripts as input, as well as your BioOntology API key.
 
-> **_NOTE:_** This code is provided as is, and the user is responsible for ensuring compliance with the terms of use of the BioOntology API and any other data sources.
+> :warning: This code is provided as is. The user is responsible for ensuring compliance with the terms of use of the BioOntology API and any other data sources.
 
+## :handshake: Contributing
+
+Contributions, issues, and feature requests are welcome! For major changes, please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate.
 
