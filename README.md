@@ -9,10 +9,6 @@
 
 # :dna: NLP Analysis of Gene's Associations on Disease Ontology and Gene Ontology :dna:
 
-<p align="center">
-  <img src="https://example.com/path/to/logo_or_relevant_image.png" alt="Logo or relevant image">
-</p>
-
 This repository contains Python code that performs Natural Language Processing (NLP) to analyze genes' associations based on Disease Ontology and Gene Ontology. It does this using abstracts from PubMed, obtained via an automated literature search. 
 
 ## :pushpin: Table of Contents
